@@ -1,0 +1,160 @@
+/* Tactical Magic support site: neon cyan and magenta on deep purple, to match the key art.
+   No web fonts or third-party requests, so the privacy page's promises hold for the site too. */
+:root {
+  --bg: #120528;
+  --bg-2: #1f0a45;
+  --glass: rgba(24, 8, 56, 0.86);
+  --ink: #f4ecff;
+  --muted: #c9b8ec;
+  --cyan: #4df3ff;
+  --magenta: #ff3ddb;
+  --violet: #9e5cff;
+  --lime: #b8ff42;
+  --display: "Futura", "Futura-CondensedExtraBold", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  background:
+    radial-gradient(1100px 600px at 12% -10%, rgba(255, 61, 219, 0.28), transparent 60%),
+    radial-gradient(900px 600px at 95% 10%, rgba(77, 243, 255, 0.22), transparent 60%),
+    radial-gradient(900px 700px at 50% 110%, rgba(158, 92, 255, 0.3), transparent 60%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 70%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a { color: var(--cyan); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: #fff; text-shadow: 0 0 10px var(--cyan); }
+a:focus-visible { outline: 3px solid var(--magenta); outline-offset: 3px; border-radius: 4px; }
+
+/* Header band */
+.band {
+  padding: 18px 16px 16px;
+  text-align: center;
+  border-bottom: 2px solid rgba(77, 243, 255, 0.55);
+  box-shadow: 0 2px 22px rgba(77, 243, 255, 0.25);
+  background: rgba(10, 2, 26, 0.55);
+}
+.band a.home { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
+.band img {
+  width: 60px; height: 60px; border-radius: 14px;
+  border: 2px solid var(--magenta);
+  box-shadow: 0 0 16px rgba(255, 61, 219, 0.6);
+}
+.logo {
+  font-family: var(--display);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 6px var(--cyan), 0 0 18px var(--cyan);
+}
+.logo em { font-style: italic; color: #ffe3fb; text-shadow: 0 0 6px var(--magenta), 0 0 18px var(--magenta); }
+
+main { max-width: 780px; margin: 0 auto; padding: 26px 16px 48px; }
+
+h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: clamp(34px, 8vw, 56px);
+  line-height: 1.02;
+  margin: 8px 0 22px;
+  color: #fff;
+  text-shadow: 0 0 8px var(--magenta), 0 0 26px var(--magenta);
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  margin: 0 0 26px;
+  border-radius: 18px;
+  border: 2px solid var(--cyan);
+  box-shadow: 0 0 22px rgba(77, 243, 255, 0.45), 0 0 60px rgba(255, 61, 219, 0.25);
+}
+
+.panel {
+  background: var(--glass);
+  border: 2px solid rgba(255, 61, 219, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(255, 61, 219, 0.28), inset 0 0 0 1px rgba(77, 243, 255, 0.25);
+  padding: 20px 22px 6px;
+  margin-bottom: 22px;
+}
+.panel h2 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 23px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(77, 243, 255, 0.55);
+}
+.panel p, .panel ul { margin: 0 0 16px; }
+.panel ul { padding-left: 22px; }
+.panel li { margin-bottom: 6px; }
+.panel li::marker { color: var(--magenta); }
+.panel strong { color: #fff; }
+
+.caption {
+  display: inline-block;
+  border: 1.5px solid var(--cyan);
+  color: var(--cyan);
+  border-radius: 999px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 3px 12px;
+  margin-bottom: 14px;
+}
+
+/* The poster's plate: a pointed-end neon button. */
+.button {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--display);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 12px 34px;
+  margin: 4px 0 18px;
+  background: rgba(24, 8, 56, 0.9);
+  clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0 50%);
+  box-shadow: inset 0 0 0 2px var(--magenta);
+  text-shadow: 0 0 10px var(--magenta);
+  filter: drop-shadow(0 0 8px rgba(255, 61, 219, 0.7));
+}
+.button:hover { background: rgba(255, 61, 219, 0.25); color: #fff; }
+.button.alt { box-shadow: inset 0 0 0 2px var(--cyan); text-shadow: 0 0 10px var(--cyan); filter: drop-shadow(0 0 8px rgba(77, 243, 255, 0.6)); }
+
+.links { display: flex; flex-wrap: wrap; gap: 14px; }
+
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 34px; }
+footer a { color: var(--magenta); }
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .logo { font-size: 26px; }
+  .band img { width: 50px; height: 50px; }
+  .panel { padding: 18px 16px 4px; }
+}
